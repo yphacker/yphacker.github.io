@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://hamburger.ink/404.html</loc>
+    
+    <lastmod>2018-08-01T12:20:04.367Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://hamburger.ink/categories/index.html</loc>
+    
+    <lastmod>2018-08-01T12:10:57.256Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://hamburger.ink/tags/index.html</loc>
+    
+    <lastmod>2018-08-01T12:10:26.204Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://hamburger.ink/2018/07/25/hello-world/</loc>
     
     <lastmod>2018-07-25T13:23:07.214Z</lastmod>
