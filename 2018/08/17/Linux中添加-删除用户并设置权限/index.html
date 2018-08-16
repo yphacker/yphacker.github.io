@@ -108,21 +108,24 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://hamburger.ink/tags/index.html">
+  <meta name="description" content="创建建用户(在root用户下)12useradd -d /home/test -m test	#增加用户test，并制定test用户的主目录为/home/testpasswd test	#为test用户设置密码 更改用户相应的权限设置：123usermod -s /sbin/nologin test	#限定用户test不能telnet，只能ftpusermod -s /bin/bash test">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux中添加-删除用户并设置权限">
+<meta property="og:url" content="http://hamburger.ink/2018/08/17/Linux中添加-删除用户并设置权限/index.html">
 <meta property="og:site_name" content="Hamburger">
+<meta property="og:description" content="创建建用户(在root用户下)12useradd -d /home/test -m test	#增加用户test，并制定test用户的主目录为/home/testpasswd test	#为test用户设置密码 更改用户相应的权限设置：123usermod -s /sbin/nologin test	#限定用户test不能telnet，只能ftpusermod -s /bin/bash test">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-01T12:10:26.000Z">
+<meta property="og:updated_time" content="2018-08-16T17:21:08.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
+<meta name="twitter:title" content="Linux中添加-删除用户并设置权限">
+<meta name="twitter:description" content="创建建用户(在root用户下)12useradd -d /home/test -m test	#增加用户test，并制定test用户的主目录为/home/testpasswd test	#为test用户设置密码 更改用户相应的权限设置：123usermod -s /sbin/nologin test	#限定用户test不能telnet，只能ftpusermod -s /bin/bash test">
 
 
 
 
 
 
-  <link rel="canonical" href="http://hamburger.ink/tags/"/>
+  <link rel="canonical" href="http://hamburger.ink/2018/08/17/Linux中添加-删除用户并设置权限/"/>
 
 
 
@@ -132,7 +135,7 @@
   };
 </script>
 
-  <title>tags | Hamburger</title>
+  <title>Linux中添加-删除用户并设置权限 | Hamburger</title>
   
 
 
@@ -238,7 +241,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
   </li>
@@ -318,68 +321,181 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://hamburger.ink/2018/08/17/Linux中添加-删除用户并设置权限/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yphacker">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hamburger">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">tags</h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
+          <h1 class="post-title" itemprop="name headline">Linux中添加-删除用户并设置权限
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-08-17 01:20:35 / 修改时间：01:21:08" itemprop="dateCreated datePublished" datetime="2018-08-17T01:20:35+08:00">2018-08-17</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
           
-        
-      </div>
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/08/17/Linux中添加-删除用户并设置权限/#comments" itemprop="discussionUrl">
+                
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/08/17/Linux中添加-删除用户并设置权限/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h4 id="创建建用户-在root用户下"><a href="#创建建用户-在root用户下" class="headerlink" title="创建建用户(在root用户下)"></a>创建建用户(在root用户下)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">useradd -d /home/test -m test	#增加用户test，并制定test用户的主目录为/home/test</span><br><span class="line">passwd test	#为test用户设置密码</span><br></pre></td></tr></table></figure>
+<h4 id="更改用户相应的权限设置："><a href="#更改用户相应的权限设置：" class="headerlink" title="更改用户相应的权限设置："></a>更改用户相应的权限设置：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">usermod -s /sbin/nologin test	#限定用户test不能telnet，只能ftp</span><br><span class="line">usermod -s /bin/bash test	#用户test恢复正常</span><br><span class="line">usermod -d /home/test test      #更改用户test的主目录为/test</span><br></pre></td></tr></table></figure>
+<h4 id="限制用户只能访问-home-test，不能访问其他路径"><a href="#限制用户只能访问-home-test，不能访问其他路径" class="headerlink" title="限制用户只能访问/home/test，不能访问其他路径"></a>限制用户只能访问/home/test，不能访问其他路径</h4><p>修改/etc/vsftpd/vsftpd.conf如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">chroot_list_enable=YES	#限制访问自身目录</span><br><span class="line"># (default follows)</span><br><span class="line">chroot_list_file=/etc/vsftpd/vsftpd.chroot_list</span><br></pre></td></tr></table></figure></p>
+<p>编辑 vsftpd.chroot_list文件，将受限制的用户添加进去，每个用户名一行</p>
+<p>改完配置文件，不要忘记重启vsftpd服务器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure></p>
+<p>5.如果需要允许用户修改密码，但是又没有telnet登录系统的权限：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">usermod -s /usr/bin/passwd test      #用户telnet后将直接进入改密界面</span><br></pre></td></tr></table></figure></p>
+<p>6.如果要删除用户，用下面代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">userdel -r newuser</span><br></pre></td></tr></table></figure></p>
+<p>因为需要彻底删除用户，所以加上-r的选项，在删除用户的同时一起把这个用户的宿主目录和邮件目录删除。</p>
+
       
     </div>
-    
-
-
 
     
+
     
     
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/16/Linux命令提示符显示当前完整路径/" rel="next" title="Linux命令提示符显示当前完整路径">
+                <i class="fa fa-chevron-left"></i> Linux命令提示符显示当前完整路径
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/17/Linux中添加-删除用户并设置权限Ⅱ/" rel="prev" title="Linux中添加-删除用户并设置权限Ⅱ">
+                Linux中添加-删除用户并设置权限Ⅱ <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
   </div>
 
 
@@ -419,8 +535,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -492,6 +617,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建建用户-在root用户下"><span class="nav-number">1.</span> <span class="nav-text">创建建用户(在root用户下)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更改用户相应的权限设置："><span class="nav-number">2.</span> <span class="nav-text">更改用户相应的权限设置：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#限制用户只能访问-home-test，不能访问其他路径"><span class="nav-number">3.</span> <span class="nav-text">限制用户只能访问/home/test，不能访问其他路径</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -650,9 +791,9 @@
   
     <script type="text/javascript">
       var disqus_config = function () {
-        this.page.url = 'http://hamburger.ink/tags/index.html';
-        this.page.identifier = 'tags/index.html';
-        this.page.title = 'tags';
+        this.page.url = 'http://hamburger.ink/2018/08/17/Linux中添加-删除用户并设置权限/';
+        this.page.identifier = '2018/08/17/Linux中添加-删除用户并设置权限/';
+        this.page.title = 'Linux中添加-删除用户并设置权限';
         };
       function loadComments () {
         var d = document, s = d.createElement('script');

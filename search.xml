@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Linux中添加-删除用户并设置权限Ⅱ]]></title>
+    <url>%2F2018%2F08%2F17%2FLinux%E4%B8%AD%E6%B7%BB%E5%8A%A0-%E5%88%A0%E9%99%A4%E7%94%A8%E6%88%B7%E5%B9%B6%E8%AE%BE%E7%BD%AE%E6%9D%83%E9%99%90%E2%85%A1%2F</url>
+    <content type="text"><![CDATA[在“Linux中添加/删除用户并设置权限”一文中，我们讲了如何添加及删除用户，可是后来，我们仍遇到了不少问题： 1.进入系统后命令行只有一个’\$’ 这样的美元符号,而且环境变量文件已经都复制到用户主目录下，怎样才能恢复成如xxx@主机名:~$ 这样的格式呢？1vim /etc/passwd 看到自己的用户名，如：1test:x:():()::/home/test: 在后面加上/bin/bash，就行了。即：1test:x:():()::/home/test:/bin/bash 如果出现”/etc/passwd” E212: Can’t open file for writing,说明权限有问题，退出后，执行chattr -i /etc/passwd，即可更改。 2.无法使用root权限123sudo -i[sudo] password for test: test is not in the sudoers file. This incident will be reported. （1）添加sudo文件的写权限,命令是:1chmod u+w /etc/sudoers （2）编辑sudoers文件12345vim /etc/sudoers``找到这一行``root ALL=(ALL:ALL) ALL 在它下面添加：1xxx ALL=(ALL:ALL) ALL #这里的xxx是你的用户名 ps:这里说下你可以sudoers添加下面四行中任意一条即可。1234youuser ALL=(ALL) ALL%youuser ALL=(ALL) ALLyouuser ALL=(ALL) NOPASSWD: ALL%youuser ALL=(ALL) NOPASSWD: ALL 第一行:允许用户youuser执行sudo命令(需要输入密码).第二行:允许用户组youuser里面的用户执行sudo命令(需要输入密码).第三行:允许用户youuser执行sudo命令,并且在执行的时候不输入密码.第四行:允许用户组youuser里面的用户执行sudo命令,并且在执行的时候不输入密码。 （3）撤销sudoers文件写权限,命令:1chmod u-w /etc/sudoers 这样普通用户就可以使用sudo了.]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Linux中添加-删除用户并设置权限]]></title>
+    <url>%2F2018%2F08%2F17%2FLinux%E4%B8%AD%E6%B7%BB%E5%8A%A0-%E5%88%A0%E9%99%A4%E7%94%A8%E6%88%B7%E5%B9%B6%E8%AE%BE%E7%BD%AE%E6%9D%83%E9%99%90%2F</url>
+    <content type="text"><![CDATA[创建建用户(在root用户下)12useradd -d /home/test -m test #增加用户test，并制定test用户的主目录为/home/testpasswd test #为test用户设置密码 更改用户相应的权限设置：123usermod -s /sbin/nologin test #限定用户test不能telnet，只能ftpusermod -s /bin/bash test #用户test恢复正常usermod -d /home/test test #更改用户test的主目录为/test 限制用户只能访问/home/test，不能访问其他路径修改/etc/vsftpd/vsftpd.conf如下：123chroot_list_enable=YES #限制访问自身目录# (default follows)chroot_list_file=/etc/vsftpd/vsftpd.chroot_list 编辑 vsftpd.chroot_list文件，将受限制的用户添加进去，每个用户名一行 改完配置文件，不要忘记重启vsftpd服务器1reboot 5.如果需要允许用户修改密码，但是又没有telnet登录系统的权限：1usermod -s /usr/bin/passwd test #用户telnet后将直接进入改密界面 6.如果要删除用户，用下面代码：1userdel -r newuser 因为需要彻底删除用户，所以加上-r的选项，在删除用户的同时一起把这个用户的宿主目录和邮件目录删除。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Linux命令提示符显示当前完整路径]]></title>
+    <url>%2F2018%2F08%2F16%2FLinux%E5%91%BD%E4%BB%A4%E6%8F%90%E7%A4%BA%E7%AC%A6%E6%98%BE%E7%A4%BA%E5%BD%93%E5%89%8D%E5%AE%8C%E6%95%B4%E8%B7%AF%E5%BE%84%2F</url>
+    <content type="text"><![CDATA[问题：linux下，命令行显示路径仅最后一个文件名，非常不方便，想显示完整路径。环境背景：linux，无root权限，可sudo(为了服务器安全，一般只给管理员root账号和密码，普通账号仅sudo权限)方法：修改环境变量PS1，vi编辑/etc/profile文件在最后加上一行语句。 命令行提示符完全显示完整的工作目录名称：export PS1=’[\u@\h $PWD]\$ ‘ 命令行提示符只列出最后一个目录：export PS1=’[\u@\h \W]$ ‘ 命令行提示符显示完整工作目录，当前用户目录会以 ~代替：export PS1=’[\u@\h \w]$ ‘修改完成后，执行: source /etc/profile 使配置生效即可。 命令释义：\u 显示当前用户账号\h 显示当前主机名\W 只显示当前路径最后一个目录\w 显示当前绝对路径（当前用户目录会以 ~代替）$PWD 显示当前全路径\$ 显示命令行’$’或者’#’符号]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2F2018%2F07%2F25%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
