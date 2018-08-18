@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[次握手和四次挥手]]></title>
+    <url>%2F2018%2F08%2F18%2F%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[Linux中添加-删除用户并设置权限Ⅱ]]></title>
     <url>%2F2018%2F08%2F17%2FLinux%E4%B8%AD%E6%B7%BB%E5%8A%A0-%E5%88%A0%E9%99%A4%E7%94%A8%E6%88%B7%E5%B9%B6%E8%AE%BE%E7%BD%AE%E6%9D%83%E9%99%90%E2%85%A1%2F</url>
     <content type="text"><![CDATA[在“Linux中添加/删除用户并设置权限”一文中，我们讲了如何添加及删除用户，可是后来，我们仍遇到了不少问题： 1.进入系统后命令行只有一个’\$’ 这样的美元符号,而且环境变量文件已经都复制到用户主目录下，怎样才能恢复成如xxx@主机名:~$ 这样的格式呢？1vim /etc/passwd 看到自己的用户名，如：1test:x:():()::/home/test: 在后面加上/bin/bash，就行了。即：1test:x:():()::/home/test:/bin/bash 如果出现”/etc/passwd” E212: Can’t open file for writing,说明权限有问题，退出后，执行chattr -i /etc/passwd，即可更改。 2.无法使用root权限123sudo -i[sudo] password for test: test is not in the sudoers file. This incident will be reported. （1）添加sudo文件的写权限,命令是:1chmod u+w /etc/sudoers （2）编辑sudoers文件12345vim /etc/sudoers``找到这一行``root ALL=(ALL:ALL) ALL 在它下面添加：1xxx ALL=(ALL:ALL) ALL #这里的xxx是你的用户名 ps:这里说下你可以sudoers添加下面四行中任意一条即可。1234youuser ALL=(ALL) ALL%youuser ALL=(ALL) ALLyouuser ALL=(ALL) NOPASSWD: ALL%youuser ALL=(ALL) NOPASSWD: ALL 第一行:允许用户youuser执行sudo命令(需要输入密码).第二行:允许用户组youuser里面的用户执行sudo命令(需要输入密码).第三行:允许用户youuser执行sudo命令,并且在执行的时候不输入密码.第四行:允许用户组youuser里面的用户执行sudo命令,并且在执行的时候不输入密码。 （3）撤销sudoers文件写权限,命令:1chmod u-w /etc/sudoers 这样普通用户就可以使用sudo了.]]></content>
