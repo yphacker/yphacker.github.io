@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[快速排序]]></title>
+    <url>%2F2018%2F08%2F19%2F%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%2F</url>
+    <content type="text"><![CDATA[快速排序123456789101112131415161718192021222324252627int sort(vector&lt;int&gt; arr) &#123; quickSort(arr, 0, arr.size()-1);&#125;void quickSort(vector&lt;int&gt; &amp;arr, int l, int r) &#123; if (l &lt; r) &#123; int pivot = partition(arr, l, r); quickSort(arr, l, pivot-1); quickSort(arr, pivot+1, r); &#125;&#125;int partition(vector&lt;int&gt; &amp;arr, int l, int r) &#123; int pivot; pivot = arr[l]; while (l &lt; r) &#123; while (l&lt;r &amp;&amp; arr[r] &gt;= pivot) &#123; --r; &#125; swap(arr[l], arr[r]); while(l&lt;r &amp;&amp; arr[l]&lt;=pivot) &#123; ++l; &#125; swap(arr[l], swap(r)); &#125; return l;&#125; 参考链接：https://www.jianshu.com/p/bc62a66be82c]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[次握手和四次挥手]]></title>
-    <url>%2F2018%2F08%2F18%2F%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B%2F</url>
+    <url>%2F2018%2F08%2F18%2F%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B%2F</url>
     <content type="text"></content>
   </entry>
   <entry>
