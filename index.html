@@ -448,20 +448,16 @@
       
         
           
-            <h3 id="Hexo文档编写"><a href="#Hexo文档编写" class="headerlink" title="Hexo文档编写"></a>Hexo文档编写</h3><h4 id="init"><a href="#init" class="headerlink" title="init"></a>init</h4><p>$ hexo init [folder]<br>新建一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。</p>
-<h4 id="new"><a href="#new" class="headerlink" title="new"></a>new</h4><p>$ hexo new [layout] <title><br>新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。(自测引号也是可以的)</title></p>
-<h4 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h4><p>$ hexo generate<br>生成静态文件。<br>选项    描述<br>-d, –deploy    文件生成后立即部署网站<br>-w, –watch    监视文件变动<br>该命令可以简写为：$ hexo g</p>
-<h4 id="publish"><a href="#publish" class="headerlink" title="publish"></a>publish</h4><p>$ hexo publish [layout] <filename><br>发表草稿。</filename></p>
-<h4 id="server"><a href="#server" class="headerlink" title="server"></a>server</h4><p>$ hexo server<br>启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/。" target="_blank" rel="noopener">http://localhost:4000/。</a><br>选项    描述：<br>-p, –port    重设端口<br>-s, –static    只使用静态文件<br>-l, –log    启动日记记录，使用覆盖记录格式</p>
-<h4 id="deploy"><a href="#deploy" class="headerlink" title="deploy"></a>deploy</h4><p>$ hexo deploy<br>部署网站。<br>参数    描述<br>-g, –generate    部署之前预先生成静态文件<br>该命令可以简写为：$ hexo d</p>
-<h4 id="render"><a href="#render" class="headerlink" title="render"></a>render</h4><p>$ hexo render <file1> [file2] …<br>渲染文件。<br>参数    描述：<br>-o, –output    设置输出路径</file1></p>
-<h4 id="migrate"><a href="#migrate" class="headerlink" title="migrate"></a>migrate</h4><p>$ hexo migrate <type><br>从其他博客系统 迁移内容。</type></p>
-<h4 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h4><p>$ hexo clean<br>清除缓存文件 (db.json) 和已生成的静态文件 (public)。</p>
-<p>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
-<h4 id="list"><a href="#list" class="headerlink" title="list"></a>list</h4><p>$ hexo list <type><br>列出网站资料。</type></p>
-<h4 id="version"><a href="#version" class="headerlink" title="version"></a>version</h4><p>$ hexo version<br>显示 Hexo 版本。</p>
-
-          
+          Hexo文档编写init$ hexo init [folder]新建一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。
+new$ hexo new [layout] 新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_l
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/08/19/hexo文档编写/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -611,10 +607,15 @@
       
         
           
-            <h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sort</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; arr)</span> </span>&#123;</span><br><span class="line">    quickSort(arr, <span class="number">0</span>, arr.size()<span class="number">-1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quickSort</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;arr, <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (l &lt; r) &#123;</span><br><span class="line">        <span class="keyword">int</span> pivot = partition(arr, l, r);</span><br><span class="line">        quickSort(arr, l, pivot<span class="number">-1</span>);</span><br><span class="line">        quickSort(arr, pivot+<span class="number">1</span>, r);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">partition</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;arr, <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> pivot;</span><br><span class="line">    pivot = arr[l];</span><br><span class="line">    <span class="keyword">while</span> (l &lt; r) &#123;</span><br><span class="line">        <span class="keyword">while</span> (l&lt;r &amp;&amp; arr[r] &gt;= pivot) &#123;</span><br><span class="line">            --r;</span><br><span class="line">        &#125;</span><br><span class="line">        swap(arr[l], arr[r]);</span><br><span class="line">        <span class="keyword">while</span>(l&lt;r &amp;&amp; arr[l]&lt;=pivot) &#123;</span><br><span class="line">            ++l;</span><br><span class="line">        &#125;</span><br><span class="line">        swap(arr[l], swap(r));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> l;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>参考链接：<br><a href="https://www.jianshu.com/p/bc62a66be82c" target="_blank" rel="noopener">https://www.jianshu.com/p/bc62a66be82c</a></p>
-
-          
+          快速排序123456789101112131415161718192021222324252627int sort(vector&lt;int&gt; arr) &#123;    quickSort(arr, 0, arr.size()-1);&#125;void quickSort(vector
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/08/19/快速排序/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -776,13 +777,16 @@
       
         
           
-            <p><img src="/images/三次握手和四次挥手-1.jpg" alt="三次握手和四次挥手"></p>
-<h3 id="三次握手："><a href="#三次握手：" class="headerlink" title="三次握手："></a>三次握手：</h3><p>1、客户端向服务器端发送报文SYN=1，ACK=0;客户端进入SYN-SEND状态。<br>2、服务端收到SYN=1，ACK=0的请求报文，向客户端返回确认报文SYN=1,ACK=1,服务端进入SYN-REVD状态。<br>3、客户端接收确认报文，需再向服务端发送一个确认收到的报文ACK=1；客户端进入ESTABLISHED状态。</p>
-<h3 id="四次挥手："><a href="#四次挥手：" class="headerlink" title="四次挥手："></a>四次挥手：</h3><p>1、客户端发起、请求断开链接。发送报文FIN=1，当FIN=1的时候，表明此报文的发送方已经完成了数据的发送，没有新的数据要传送，并要求释放链接。客户端进入FIN-WAIT-1状态。<br>2、  服务器收到客户端的请求断开链接的报文之后，返回确认信息。ACK=1，服务器进入CLOSE-WAIT状态。此时客户端不能给服务器发送信息报文，只能接收。<br>3、  当服务器也没有了可以传的信息之后，给客户端发送请求结束的报文。FIN=1，ACK=1，服务器进入LAST-ACK状态。<br>4、  客户端接收到FIN=1的报文之后，返回确认报文，ACK=1，发送完毕之后，客户端进入等待状态，等待两个时间周期。链接关闭。<br>注意：为什么要等两个时间周期：超时重传机制<br>客户端最后一个确认收到的ACK=1的报文如果在传输的过程中丢失，服务端没有收到确认报文，就会超时重传，重新发送FIN=1的报文，如果不等两个时间周期，重新发的FIN=1的报文客户端不会收到。</p>
-<p>1、为什么连接的时候是三次握手，关闭的时候却是四次握手？<br>答：因为当Server端收到Client端的SYN连接请求报文后，可以直接发送SYN+ACK报文。其中ACK报文是用来应答的，SYN报文是用来同步的。但是关闭连接时，当Server端收到FIN报文时，很可能并不会立即关闭SOCKET，所以只能先回复一个ACK报文，告诉Client端，”你发的FIN报文我收到了”。只有等到我Server端所有的报文都发送完了，我才能发送FIN报文，因此不能一起发送。故需要四步握手。</p>
-<p>2、为什么TIME_WAIT状态需要经过2MSL(最大报文段生存时间)才能返回到CLOSE状态？<br>答：虽然按道理，四个报文都发送完毕，我们可以直接进入CLOSE状态了，但是我们必须假象网络是不可靠的，有可以最后一个ACK丢失。所以TIME_WAIT状态就是用来重发可能丢失的ACK报文。</p>
-
           
+三次握手：1、客户端向服务器端发送报文SYN=1，ACK=0;客户端进入SYN-SEND状态。2、服务端收到SYN=1，ACK=0的请求报文，向客户端返回确认报文SYN=1,ACK=1,服务端进入SYN-REVD状态。3、客户端接收确认报文，需再向服务端发送一个确认收到的报文ACK=1；客户端进入
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/08/18/三次握手和四次挥手/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -932,21 +936,17 @@
       
         
           
-            <p>在“Linux中添加/删除用户并设置权限”一文中，我们讲了如何添加及删除用户，可是后来，我们仍遇到了不少问题：</p>
-<p>1.进入系统后命令行只有一个’\$’ 这样的美元符号,而且环境变量文件已经都复制到用户主目录下，怎样才能恢复成如xxx@主机名:~$ 这样的格式呢？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/passwd</span><br></pre></td></tr></table></figure></p>
-<p>看到自己的用户名，如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">test:x:():()::/home/test:</span><br></pre></td></tr></table></figure></p>
-<p>在后面加上/bin/bash，就行了。即：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">test:x:():()::/home/test:/bin/bash</span><br></pre></td></tr></table></figure></p>
-<p>如果出现”/etc/passwd” E212: Can’t open file for writing,说明权限有问题，退出后，执行chattr -i /etc/passwd，即可更改。</p>
-<p>2.无法使用root权限<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo -i</span><br><span class="line">[sudo] password for test: </span><br><span class="line">test is not in the sudoers file.  This incident will be reported.</span><br></pre></td></tr></table></figure></p>
-<p>（1）添加sudo文件的写权限,命令是:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod u+w /etc/sudoers</span><br></pre></td></tr></table></figure></p>
-<p>（2）编辑sudoers文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/sudoers</span><br><span class="line">``</span><br><span class="line">找到这一行</span><br><span class="line">``</span><br><span class="line">root ALL=(ALL:ALL) ALL</span><br></pre></td></tr></table></figure></p>
-<p>在它下面添加：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xxx ALL=(ALL:ALL) ALL #这里的xxx是你的用户名</span><br></pre></td></tr></table></figure></p>
-<p>ps:这里说下你可以sudoers添加下面四行中任意一条即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">youuser            ALL=(ALL)                ALL</span><br><span class="line">%youuser           ALL=(ALL)                ALL</span><br><span class="line">youuser            ALL=(ALL)                NOPASSWD: ALL</span><br><span class="line">%youuser           ALL=(ALL)                NOPASSWD: ALL</span><br></pre></td></tr></table></figure></p>
-<p>第一行:允许用户youuser执行sudo命令(需要输入密码).<br>第二行:允许用户组youuser里面的用户执行sudo命令(需要输入密码).<br>第三行:允许用户youuser执行sudo命令,并且在执行的时候不输入密码.<br>第四行:允许用户组youuser里面的用户执行sudo命令,并且在执行的时候不输入密码。</p>
-<p>（3）撤销sudoers文件写权限,命令:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod u-w /etc/sudoers</span><br></pre></td></tr></table></figure></p>
-<p>这样普通用户就可以使用sudo了.</p>
-
-          
+          在“Linux中添加/删除用户并设置权限”一文中，我们讲了如何添加及删除用户，可是后来，我们仍遇到了不少问题：
+1.进入系统后命令行只有一个’\$’ 这样的美元符号,而且环境变量文件已经都复制到用户主目录下，怎样才能恢复成如xxx@主机名:~$ 这样的格式呢？1vim /etc/passwd
+看到自
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/08/17/Linux中添加-删除用户并设置权限Ⅱ/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1096,16 +1096,16 @@
       
         
           
-            <h4 id="创建建用户-在root用户下"><a href="#创建建用户-在root用户下" class="headerlink" title="创建建用户(在root用户下)"></a>创建建用户(在root用户下)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">useradd -d /home/test -m test	#增加用户test，并制定test用户的主目录为/home/test</span><br><span class="line">passwd test	#为test用户设置密码</span><br></pre></td></tr></table></figure>
-<h4 id="更改用户相应的权限设置："><a href="#更改用户相应的权限设置：" class="headerlink" title="更改用户相应的权限设置："></a>更改用户相应的权限设置：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">usermod -s /sbin/nologin test	#限定用户test不能telnet，只能ftp</span><br><span class="line">usermod -s /bin/bash test	#用户test恢复正常</span><br><span class="line">usermod -d /home/test test      #更改用户test的主目录为/test</span><br></pre></td></tr></table></figure>
-<h4 id="限制用户只能访问-home-test，不能访问其他路径"><a href="#限制用户只能访问-home-test，不能访问其他路径" class="headerlink" title="限制用户只能访问/home/test，不能访问其他路径"></a>限制用户只能访问/home/test，不能访问其他路径</h4><p>修改/etc/vsftpd/vsftpd.conf如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">chroot_list_enable=YES	#限制访问自身目录</span><br><span class="line"># (default follows)</span><br><span class="line">chroot_list_file=/etc/vsftpd/vsftpd.chroot_list</span><br></pre></td></tr></table></figure></p>
-<p>编辑 vsftpd.chroot_list文件，将受限制的用户添加进去，每个用户名一行</p>
-<p>改完配置文件，不要忘记重启vsftpd服务器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure></p>
-<p>5.如果需要允许用户修改密码，但是又没有telnet登录系统的权限：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">usermod -s /usr/bin/passwd test      #用户telnet后将直接进入改密界面</span><br></pre></td></tr></table></figure></p>
-<p>6.如果要删除用户，用下面代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">userdel -r newuser</span><br></pre></td></tr></table></figure></p>
-<p>因为需要彻底删除用户，所以加上-r的选项，在删除用户的同时一起把这个用户的宿主目录和邮件目录删除。</p>
-
-          
+          创建建用户(在root用户下)12useradd -d /home/test -m test	#增加用户test，并制定test用户的主目录为/home/testpasswd test	#为test用户设置密码
+更改用户相应的权限设置：123usermod -s /sbin/nologin test
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/08/17/Linux中添加-删除用户并设置权限/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1267,15 +1267,17 @@
       
         
           
-            <p>问题：linux下，命令行显示路径仅最后一个文件名，非常不方便，想显示完整路径。<br>环境背景：linux，无root权限，可sudo(为了服务器安全，一般只给管理员root账号和密码，普通账号仅sudo权限)<br>方法：修改环境变量PS1，vi编辑/etc/profile文件在最后加上一行语句。 </p>
-<ol>
-<li>命令行提示符完全显示完整的工作目录名称：<br>export PS1=’[\u@\h $PWD]\$ ‘ </li>
-<li>命令行提示符只列出最后一个目录：<br>export PS1=’[\u@\h \W]$ ‘ </li>
-<li>命令行提示符显示完整工作目录，当前用户目录会以 ~代替：<br>export PS1=’[\u@\h \w]$ ‘<br>修改完成后，执行: source /etc/profile 使配置生效即可。</li>
-</ol>
-<p>命令释义：<br>\u 显示当前用户账号<br>\h 显示当前主机名<br>\W 只显示当前路径最后一个目录<br>\w 显示当前绝对路径（当前用户目录会以 ~代替）<br>$PWD 显示当前全路径<br>\$ 显示命令行’$’或者’#’符号</p>
+          问题：linux下，命令行显示路径仅最后一个文件名，非常不方便，想显示完整路径。环境背景：linux，无root权限，可sudo(为了服务器安全，一般只给管理员root账号和密码，普通账号仅sudo权限)方法：修改环境变量PS1，vi编辑/etc/profile文件在最后加上一行语句。 
 
-          
+命令行提
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/08/16/Linux命令提示符显示当前完整路径/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1437,17 +1439,15 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
+          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/25/hello-world/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
