@@ -4,6 +4,72 @@
 
     
   <url>
+    <loc>http://hamburger.ink/2018/08/21/%E6%B5%B7%E9%87%8F%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/</loc>
+    <lastmod>2018-08-21T09:16:41.000Z</lastmod>
+    <data>
+        <display>
+        <title>海量数据处理</title>
+        <pubTime>2018-08-21T09:16:41.000Z</pubTime>
+        
+        <tag>标签1</tag>
+         
+        <tag>标签2</tag>
+         
+         
+           
+             
+              <breadCrumb title="面试" url="http://hamburger.ink/categories/%E9%9D%A2%E8%AF%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://hamburger.ink/2018/08/18/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/</loc>
+    <lastmod>2018-08-20T08:59:38.000Z</lastmod>
+    <data>
+        <display>
+        <title>三次握手和四次挥手</title>
+        <pubTime>2018-08-18T15:32:54.000Z</pubTime>
+        
+        <tag>三次握手</tag>
+         
+        <tag>四次挥手</tag>
+         
+         
+           
+             
+              <breadCrumb title="计算机网络" url="http://hamburger.ink/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://hamburger.ink/2018/08/20/%E8%BF%9B%E7%A8%8B%E5%92%8C%E5%92%8C%E7%BA%BF%E7%A8%8B/</loc>
+    <lastmod>2018-08-20T08:59:38.000Z</lastmod>
+    <data>
+        <display>
+        <title>进程和和线程</title>
+        <pubTime>2018-08-20T08:59:38.000Z</pubTime>
+        
+        <tag>进程</tag>
+         
+        <tag>线程</tag>
+         
+         
+           
+             
+              <breadCrumb title="操作系统" url="http://hamburger.ink/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://hamburger.ink/2018/08/19/hexo%E6%96%87%E6%A1%A3%E7%BC%96%E5%86%99/</loc>
     <lastmod>2018-08-19T17:37:08.000Z</lastmod>
     <data>
@@ -25,21 +91,6 @@
         <display>
         <title>kafka</title>
         <pubTime>2018-08-19T16:48:07.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://hamburger.ink/2018/08/18/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/</loc>
-    <lastmod>2018-08-19T16:36:35.000Z</lastmod>
-    <data>
-        <display>
-        <title>三次握手和四次挥手</title>
-        <pubTime>2018-08-18T15:32:54.000Z</pubTime>
         
          
            
