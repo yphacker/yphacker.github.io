@@ -108,24 +108,24 @@
 
 
 
-  <meta name="description" content="进程和线程关系及区别">
+  <meta name="description" content="python面试中的一些基础知识">
 <meta property="og:type" content="article">
-<meta property="og:title" content="进程和和线程">
-<meta property="og:url" content="http://hamburger.ink/2018/08/20/进程和和线程/index.html">
+<meta property="og:title" content="python基础知识">
+<meta property="og:url" content="http://hamburger.ink/2018/08/26/python基础知识/index.html">
 <meta property="og:site_name" content="Hamburger">
-<meta property="og:description" content="进程和线程关系及区别">
+<meta property="og:description" content="python面试中的一些基础知识">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-20T08:59:38.000Z">
+<meta property="og:updated_time" content="2018-08-26T08:38:45.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="进程和和线程">
-<meta name="twitter:description" content="进程和线程关系及区别">
+<meta name="twitter:title" content="python基础知识">
+<meta name="twitter:description" content="python面试中的一些基础知识">
 
 
 
 
 
 
-  <link rel="canonical" href="http://hamburger.ink/2018/08/20/进程和和线程/"/>
+  <link rel="canonical" href="http://hamburger.ink/2018/08/26/python基础知识/"/>
 
 
 
@@ -135,7 +135,7 @@
   };
 </script>
 
-  <title>进程和和线程 | Hamburger</title>
+  <title>python基础知识 | Hamburger</title>
   
 
 
@@ -341,7 +341,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://hamburger.ink/2018/08/20/进程和和线程/">
+    <link itemprop="mainEntityOfPage" href="http://hamburger.ink/2018/08/26/python基础知识/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yphacker">
@@ -358,7 +358,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">进程和和线程
+          <h1 class="post-title" itemprop="name headline">python基础知识
               
             
           </h1>
@@ -383,7 +383,7 @@
                 
               
 
-              <time title="创建时间：2018-08-20 16:59:38" itemprop="dateCreated datePublished" datetime="2018-08-20T16:59:38+08:00">2018-08-20</time>
+              <time title="创建时间：2018-08-26 16:38:45" itemprop="dateCreated datePublished" datetime="2018-08-26T16:38:45+08:00">2018-08-26</time>
             
 
             
@@ -401,7 +401,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/操作系统/" itemprop="url" rel="index"><span itemprop="name">操作系统</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/面试/" itemprop="url" rel="index"><span itemprop="name">面试</span></a></span>
 
                 
                 
@@ -416,10 +416,10 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/08/20/进程和和线程/#comments" itemprop="discussionUrl">
+                <a href="/2018/08/26/python基础知识/#comments" itemprop="discussionUrl">
                 
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/08/20/进程和和线程/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/08/26/python基础知识/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -433,7 +433,7 @@
           
 
           
-              <div class="post-description">进程和线程关系及区别</div>
+              <div class="post-description">python面试中的一些基础知识</div>
           
 
         </div>
@@ -451,13 +451,24 @@
       
         <p>[^_^]:<br>    &gt;<br>    <img src="" alt=""></p>
 <a id="more"></a>
-<h2 id="进程和和线程"><a href="#进程和和线程" class="headerlink" title="进程和和线程"></a>进程和和线程</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>进程是具有一定独立功能的程序关于某个数据集合上的一次运行活动,进程是系统进行资源分配和调度的一个独立单位.<br>线程是进程的一个实体,是CPU调度和分派的基本单位,它是比进程更小的能独立运行的基本单位.线程自己基本上不拥有系统资源,只拥有一点在运行中必不可少的资源(如程序计数器,一组寄存器和栈),但是它可与同属一个进程的其他的线程共享进程所拥有的全部资源.</p>
-<h3 id="关系"><a href="#关系" class="headerlink" title="关系"></a>关系</h3><p>一个线程可以创建和撤销另一个线程;同一个进程中的多个线程之间可以并发执行.<br>相对进程而言，线程是一个更加接近于执行体的概念，它可以与同进程中的其他线程共享数据，但拥有自己的栈空间，拥有独立的执行序列。</p>
-<h3 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h3><p>进程和线程的主要差别在于它们是不同的操作系统资源管理方式。进程有独立的地址空间，一个进程崩溃后，在保护模式下不会对其它进程产生影响，而线程只是一个进程中的不同执行路径。线程有自己的堆栈和局部变量，但线程之间没有单独的地址空间，一个线程死掉就等于整个进程死掉，所以多进程的程序要比多线程的程序健壮，但在进程切换时，耗费资源较大，效率要差一些。但对于一些要求同时进行并且又要共享某些变量的并发操作，只能用线程，不能用进程。<br>1) 简而言之,一个程序至少有一个进程,一个进程至少有一个线程.<br>2) 线程的划分尺度小于进程，使得多线程程序的并发性高。<br>3) 另外，进程在执行过程中拥有独立的内存单元，而多个线程共享内存，从而极大地提高了程序的运行效率。<br>4) 线程在执行过程中与进程还是有区别的。每个独立的线程有一个程序运行的入口、顺序执行序列和程序的出口。但是线程不能够独立执行，必须依存在应用程序中，由应用程序提供多个线程执行控制。<br>5) 从逻辑角度来看，多线程的意义在于一个应用程序中，有多个执行部分可以同时执行。但操作系统并没有将多个线程看做多个独立的应用，来实现进程的调度和管理以及资源分配。这就是进程和线程的重要区别。</p>
-<h3 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h3><p>线程和进程在使用上各有优缺点：线程执行开销小，但不利于资源的管理和保护；而进程正相反。同时，线程适合于在SMP机器上运行，而进程则可以跨机器迁移。</p>
-<p>[^_^]:<br>    &gt; 参考阅读</p>
-<pre><code>- []()
-</code></pre><hr>
+<h3 id="python基础知识"><a href="#python基础知识" class="headerlink" title="python基础知识"></a>python基础知识</h3><h4 id="可变与不可变类型"><a href="#可变与不可变类型" class="headerlink" title="可变与不可变类型"></a>可变与不可变类型</h4><p>python中的对象分为：可变对象和不可变对象<br>可变对象：列表（list）、字典（dict ）<br>不可变对象：int、string、float、tuple<br>对不可变类型的变量重新赋值，实际上是重新创建一个不可变类型的对象，并将原来的变量重新指向新创建的对象（如果没有其他变量引用原有对象的话（即引用计数为0），原有对象就会被回收）。</p>
+<h5 id="可变与不可变类型作用"><a href="#可变与不可变类型作用" class="headerlink" title="可变与不可变类型作用"></a>可变与不可变类型作用</h5><p>python函数的参数传递：在python中规定函数的参数传递为引用传递，也就是说传递给函数的参数是这个变量所指向的内存地址。但是在C中，参数传递可以有值传递和引用传递，当需要修改外面参数的值的时候就才用引用传递（在参数前面加一个*，表示传递参数所指的内存地址），但不需要修改外部参数值的时候就采用值传递。</p>
+<p>那么在python中如何实现和值传递和引用传递相似的功能呢？———可变类型和不可变类型就发挥作用了。当你需要实现函数参数引用传递的功能的时候，你就将类型为list ,dict的变量传递给相应的函数。当你需要实现函数值传递功能的时候，你就可以将类型为int，float，string，tuple类型的变量传递给函数当做参数。</p>
+<p>听说python只允许引用传递是为方便内存管理，因为python使用的内存回收机制是计数器回收，就是每块内存上有一个计数器，表示当前有多少个对象指向该内存。每当一个变量不再使用时，就让该计数器-1，有新对象指向该内存时就让计数器+1，当计时器为0时，就可以收回这块内存了。当然我觉得它肯定不止用了计数器吧，应该还有其他的技术，比如分代回收什么的。不再讨论之列,就这样了</p>
+<h4 id="深拷贝和浅拷贝的实现方式以及区别"><a href="#深拷贝和浅拷贝的实现方式以及区别" class="headerlink" title="深拷贝和浅拷贝的实现方式以及区别"></a>深拷贝和浅拷贝的实现方式以及区别</h4><h5 id="Python中直接赋值"><a href="#Python中直接赋值" class="headerlink" title="Python中直接赋值"></a>Python中直接赋值</h5><p>python中的直接赋值相当于传递对象的引用而已，原对象改变，被赋值的对象也会改变。</p>
+<h5 id="Python中浅拷贝"><a href="#Python中浅拷贝" class="headerlink" title="Python中浅拷贝"></a>Python中浅拷贝</h5><p>copy浅拷贝，没有拷贝子对象（这里应该指的是可变对象），只是将新对象给了一个新的首地址，里面的数据和地址都和原始数据相同，所以原始数据改变，子对象会改变。</p>
+<h5 id="Python中深拷贝"><a href="#Python中深拷贝" class="headerlink" title="Python中深拷贝"></a>Python中深拷贝</h5><p>python中的深拷贝，包含对原始对象的子对象的深拷贝，所以，对原拷贝对象的改变不会对深拷贝后对象没有任何影响。</p>
+<h6 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h6><p>1、赋值：简单地拷贝对象的引用，两个对象的id相同。<br>2、浅拷贝：创建一个新的组合对象，这个新对象与原对象共享内存中的子对象。<br>3、深拷贝：创建一个新的组合对象，同时递归地拷贝所有子对象，新的组合对象与原对象没有任何关联。虽然实际上会共享不可变的子对象，但不影响它们的相互独立性。</p>
+<p>浅拷贝和深拷贝的不同仅仅是对组合对象来说，所谓的组合对象就是包含了其它对象的对象，如列表，类实例。而对于数字、字符串以及其它“原子”类型，没有拷贝一说，产生的都是原对象的引用。 </p>
+<h4 id="new-与-init-的区别"><a href="#new-与-init-的区别" class="headerlink" title="__new__()与__init__()的区别"></a>__new__()与__init__()的区别</h4><p>new方法是类创建实例的方法， 创建对象时调用，返回当前对象的一个实例<br>init()方法是类实例创建之后调用，用于对当前对象的一些初始化，没有返回值。<br>new()方法和init()方法所接收的参数是一样的。<br>需要注意的几点：<br>1、init()函数并不相当于C++或者C#中的构造函数，因为在执行init()函数的时候，实例已经构造出来了<br>2、子类可以不重写init()方法，实例化子类时可以自动调用超类中已定义的init()方法。但是如果重写了init()，实例化子类时将不会再 隐式的去调用超类中已定义的init()代码。<br>3、如果重写了init()，为了能使用或扩展超类中的行为，最好显式的调用超类的init()方法</p>
+<p>[^_^]:</p>
+<blockquote>
+<p>参考阅读</p>
+<ul>
+<li><a href="https://blog.csdn.net/xiongchengluo1129/article/details/79113591" target="_blank" rel="noopener">Python基础面试中常常问道的问题</a></li>
+</ul>
+</blockquote>
+<hr>
 
       
     </div>
@@ -478,9 +489,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/进程/" rel="tag"># 进程</a>
-          
-            <a href="/tags/线程/" rel="tag"># 线程</a>
+            <a href="/tags/python/" rel="tag"># python</a>
           
         </div>
       
@@ -493,8 +502,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/20/kafka/" rel="next" title="kafka">
-                <i class="fa fa-chevron-left"></i> kafka
+              <a href="/2018/08/21/海量数据处理/" rel="next" title="海量数据处理">
+                <i class="fa fa-chevron-left"></i> 海量数据处理
               </a>
             
           </div>
@@ -503,8 +512,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/08/21/海量数据处理/" rel="prev" title="海量数据处理">
-                海量数据处理 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/08/26/设计模式/" rel="prev" title="常用设计模式">
+                常用设计模式 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -694,7 +703,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#进程和和线程"><span class="nav-text">进程和和线程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关系"><span class="nav-text">关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#区别"><span class="nav-text">区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#优缺点"><span class="nav-text">优缺点</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#python基础知识"><span class="nav-text">python基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#可变与不可变类型"><span class="nav-text">可变与不可变类型</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#可变与不可变类型作用"><span class="nav-text">可变与不可变类型作用</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#深拷贝和浅拷贝的实现方式以及区别"><span class="nav-text">深拷贝和浅拷贝的实现方式以及区别</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Python中直接赋值"><span class="nav-text">Python中直接赋值</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Python中浅拷贝"><span class="nav-text">Python中浅拷贝</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Python中深拷贝"><span class="nav-text">Python中深拷贝</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#总结"><span class="nav-text">总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#new-与-init-的区别"><span class="nav-text">__new__()与__init__()的区别</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -858,9 +867,9 @@
   
     <script type="text/javascript">
       var disqus_config = function () {
-        this.page.url = 'http://hamburger.ink/2018/08/20/进程和和线程/';
-        this.page.identifier = '2018/08/20/进程和和线程/';
-        this.page.title = '进程和和线程';
+        this.page.url = 'http://hamburger.ink/2018/08/26/python基础知识/';
+        this.page.identifier = '2018/08/26/python基础知识/';
+        this.page.title = 'python基础知识';
         };
       function loadComments () {
         var d = document, s = d.createElement('script');

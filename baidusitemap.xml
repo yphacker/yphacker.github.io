@@ -4,6 +4,59 @@
 
     
   <url>
+    <loc>http://hamburger.ink/2018/08/26/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
+    <lastmod>2018-08-26T08:54:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>常用设计模式</title>
+        <pubTime>2018-08-26T08:54:36.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="面试" url="http://hamburger.ink/categories/%E9%9D%A2%E8%AF%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://hamburger.ink/2018/08/26/python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</loc>
+    <lastmod>2018-08-26T08:38:45.000Z</lastmod>
+    <data>
+        <display>
+        <title>python基础知识</title>
+        <pubTime>2018-08-26T08:38:45.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+         
+           
+             
+              <breadCrumb title="面试" url="http://hamburger.ink/categories/%E9%9D%A2%E8%AF%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://hamburger.ink/2018/08/19/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/</loc>
+    <lastmod>2018-08-22T16:02:03.000Z</lastmod>
+    <data>
+        <display>
+        <title>快速排序</title>
+        <pubTime>2018-08-19T06:54:52.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://hamburger.ink/2018/08/21/%E6%B5%B7%E9%87%8F%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/</loc>
     <lastmod>2018-08-21T09:16:41.000Z</lastmod>
     <data>
@@ -91,21 +144,6 @@
         <display>
         <title>kafka</title>
         <pubTime>2018-08-19T16:48:07.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://hamburger.ink/2018/08/19/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/</loc>
-    <lastmod>2018-08-19T07:23:59.000Z</lastmod>
-    <data>
-        <display>
-        <title>快速排序</title>
-        <pubTime>2018-08-19T06:54:52.000Z</pubTime>
         
          
            

@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://hamburger.ink/2018/08/26/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
+    
+    <lastmod>2018-08-26T08:54:36.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://hamburger.ink/2018/08/26/python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</loc>
+    
+    <lastmod>2018-08-26T08:38:45.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://hamburger.ink/2018/08/19/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/</loc>
+    
+    <lastmod>2018-08-22T16:02:03.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://hamburger.ink/2018/08/21/%E6%B5%B7%E9%87%8F%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/</loc>
     
     <lastmod>2018-08-21T09:16:41.000Z</lastmod>
@@ -33,13 +54,6 @@
     <loc>http://hamburger.ink/2018/08/20/kafka/</loc>
     
     <lastmod>2018-08-19T16:48:07.641Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://hamburger.ink/2018/08/19/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/</loc>
-    
-    <lastmod>2018-08-19T07:23:59.000Z</lastmod>
     
   </url>
   
