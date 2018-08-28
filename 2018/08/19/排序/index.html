@@ -108,24 +108,24 @@
 
 
 
-  <meta name="description" content="快速排序123456789101112131415161718192021222324252627int sort(vector&amp;lt;int&amp;gt; arr) &amp;#123;    quickSort(arr, 0, arr.size()-1);&amp;#125;void quickSort(vector&amp;lt;int&amp;gt; &amp;amp;arr, int l, int r) &amp;#123;    if (">
+  <meta name="description" content="python面试中的一些基础知识">
 <meta property="og:type" content="article">
-<meta property="og:title" content="快速排序">
-<meta property="og:url" content="http://hamburger.ink/2018/08/19/快速排序/index.html">
+<meta property="og:title" content="排序">
+<meta property="og:url" content="http://hamburger.ink/2018/08/19/排序/index.html">
 <meta property="og:site_name" content="Hamburger">
-<meta property="og:description" content="快速排序123456789101112131415161718192021222324252627int sort(vector&amp;lt;int&amp;gt; arr) &amp;#123;    quickSort(arr, 0, arr.size()-1);&amp;#125;void quickSort(vector&amp;lt;int&amp;gt; &amp;amp;arr, int l, int r) &amp;#123;    if (">
+<meta property="og:description" content="python面试中的一些基础知识">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-22T16:02:03.000Z">
+<meta property="og:updated_time" content="2018-08-26T08:38:45.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="快速排序">
-<meta name="twitter:description" content="快速排序123456789101112131415161718192021222324252627int sort(vector&amp;lt;int&amp;gt; arr) &amp;#123;    quickSort(arr, 0, arr.size()-1);&amp;#125;void quickSort(vector&amp;lt;int&amp;gt; &amp;amp;arr, int l, int r) &amp;#123;    if (">
+<meta name="twitter:title" content="排序">
+<meta name="twitter:description" content="python面试中的一些基础知识">
 
 
 
 
 
 
-  <link rel="canonical" href="http://hamburger.ink/2018/08/19/快速排序/"/>
+  <link rel="canonical" href="http://hamburger.ink/2018/08/19/排序/"/>
 
 
 
@@ -135,7 +135,7 @@
   };
 </script>
 
-  <title>快速排序 | Hamburger</title>
+  <title>排序 | Hamburger</title>
   
 
 
@@ -341,7 +341,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://hamburger.ink/2018/08/19/快速排序/">
+    <link itemprop="mainEntityOfPage" href="http://hamburger.ink/2018/08/19/排序/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yphacker">
@@ -358,7 +358,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">快速排序
+          <h1 class="post-title" itemprop="name headline">排序
               
             
           </h1>
@@ -400,11 +400,29 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-08-23 00:02:03" itemprop="dateModified" datetime="2018-08-23T00:02:03+08:00">2018-08-23</time>
+                <time title="修改时间：2018-08-26 16:38:45" itemprop="dateModified" datetime="2018-08-26T16:38:45+08:00">2018-08-26</time>
               
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/面试/" itemprop="url" rel="index"><span itemprop="name">面试</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -414,10 +432,10 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/08/19/快速排序/#comments" itemprop="discussionUrl">
+                <a href="/2018/08/19/排序/#comments" itemprop="discussionUrl">
                 
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/08/19/快速排序/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/08/19/排序/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -430,6 +448,8 @@
 
           
 
+          
+              <div class="post-description">python面试中的一些基础知识</div>
           
 
         </div>
@@ -445,8 +465,21 @@
       
 
       
-        <h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sort</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; arr)</span> </span>&#123;</span><br><span class="line">    quickSort(arr, <span class="number">0</span>, arr.size()<span class="number">-1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quickSort</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;arr, <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (l &lt; r) &#123;</span><br><span class="line">        <span class="keyword">int</span> pivot = partition(arr, l, r);</span><br><span class="line">        quickSort(arr, l, pivot<span class="number">-1</span>);</span><br><span class="line">        quickSort(arr, pivot+<span class="number">1</span>, r);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">partition</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;arr, <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> pivot;</span><br><span class="line">    pivot = arr[l];</span><br><span class="line">    <span class="keyword">while</span> (l &lt; r) &#123;</span><br><span class="line">        <span class="keyword">while</span> (l&lt;r &amp;&amp; arr[r] &gt;= pivot) &#123;</span><br><span class="line">            --r;</span><br><span class="line">        &#125;</span><br><span class="line">        swap(arr[l], arr[r]);</span><br><span class="line">        <span class="keyword">while</span>(l&lt;r &amp;&amp; arr[l]&lt;=pivot) &#123;</span><br><span class="line">            ++l;</span><br><span class="line">        &#125;</span><br><span class="line">        swap(arr[l], swap(r));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> l;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>参考链接：<br><a href="https://www.jianshu.com/p/bc62a66be82c" target="_blank" rel="noopener">https://www.jianshu.com/p/bc62a66be82c</a><br><a href="https://segmentfault.com/a/1190000002651247" target="_blank" rel="noopener">https://segmentfault.com/a/1190000002651247</a></p>
+        <p>[^_^]:<br>    &gt;<br>    <img src="" alt=""></p>
+<a id="more"></a>
+<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sort</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; arr)</span> </span>&#123;</span><br><span class="line">    quickSort(arr, <span class="number">0</span>, arr.size()<span class="number">-1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quickSort</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;arr, <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (l &lt; r) &#123;</span><br><span class="line">        <span class="keyword">int</span> pivot = partition(arr, l, r);</span><br><span class="line">        quickSort(arr, l, pivot<span class="number">-1</span>);</span><br><span class="line">        quickSort(arr, pivot+<span class="number">1</span>, r);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">partition</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;arr, <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> pivot;</span><br><span class="line">    pivot = arr[l];</span><br><span class="line">    <span class="keyword">while</span> (l &lt; r) &#123;</span><br><span class="line">        <span class="keyword">while</span> (l&lt;r &amp;&amp; arr[r] &gt;= pivot) &#123;</span><br><span class="line">            --r;</span><br><span class="line">        &#125;</span><br><span class="line">        swap(arr[l], arr[r]);</span><br><span class="line">        <span class="keyword">while</span>(l&lt;r &amp;&amp; arr[l]&lt;=pivot) &#123;</span><br><span class="line">            ++l;</span><br><span class="line">        &#125;</span><br><span class="line">        swap(arr[l], swap(r));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> l;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h3> <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">void</span> <span class="title">Merge</span><span class="params">(<span class="keyword">int</span> A[], <span class="keyword">int</span> left, <span class="keyword">int</span> mid, <span class="keyword">int</span> right)</span><span class="comment">// 合并两个已排好序的数组A[left...mid]和A[mid+1...right]</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> len = right - left + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> *temp = <span class="keyword">new</span> <span class="keyword">int</span>[len];       <span class="comment">// 辅助空间O(n)</span></span><br><span class="line">    <span class="keyword">int</span> index = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> i = left;                   <span class="comment">// 前一数组的起始元素</span></span><br><span class="line">    <span class="keyword">int</span> j = mid + <span class="number">1</span>;                <span class="comment">// 后一数组的起始元素</span></span><br><span class="line">    <span class="keyword">while</span> (i &lt;= mid &amp;&amp; j &lt;= right)</span><br><span class="line">    &#123;</span><br><span class="line">        temp[index++] = A[i] &lt;= A[j] ? A[i++] : A[j++];  <span class="comment">// 带等号保证归并排序的稳定性</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (i &lt;= mid)</span><br><span class="line">    &#123;</span><br><span class="line">        temp[index++] = A[i++];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (j &lt;= right)</span><br><span class="line">    &#123;</span><br><span class="line">        temp[index++] = A[j++];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; len; k++)</span><br><span class="line">    &#123;</span><br><span class="line">        A[left++] = temp[k];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">MergeSortRecursion</span><span class="params">(<span class="keyword">int</span> A[], <span class="keyword">int</span> left, <span class="keyword">int</span> right)</span>    <span class="comment">// 递归实现的归并排序(自顶向下)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (left == right)    <span class="comment">// 当待排序的序列长度为1时，递归开始回溯，进行merge操作</span></span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">int</span> mid = (left + right) / <span class="number">2</span>;</span><br><span class="line">    MergeSortRecursion(A, left, mid);</span><br><span class="line">    MergeSortRecursion(A, mid + <span class="number">1</span>, right);</span><br><span class="line">    Merge(A, left, mid, right);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">MergeSortIteration</span><span class="params">(<span class="keyword">int</span> A[], <span class="keyword">int</span> len)</span>    <span class="comment">// 非递归(迭代)实现的归并排序(自底向上)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> left, mid, right;<span class="comment">// 子数组索引,前一个为A[left...mid]，后一个子数组为A[mid+1...right]</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; len; i *= <span class="number">2</span>)        <span class="comment">// 子数组的大小i初始为1，每轮翻倍</span></span><br><span class="line">    &#123;</span><br><span class="line">        left = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (left + i &lt; len)              <span class="comment">// 后一个子数组存在(需要归并)</span></span><br><span class="line">        &#123;</span><br><span class="line">            mid = left + i - <span class="number">1</span>;</span><br><span class="line">            right = mid + i &lt; len ? mid + i : len - <span class="number">1</span>;<span class="comment">// 后一个子数组大小可能不够</span></span><br><span class="line">            Merge(A, left, mid, right);</span><br><span class="line">            left = right + <span class="number">1</span>;               <span class="comment">// 前一个子数组索引向后移动</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>[^_^]:</p>
+<blockquote>
+<p>参考阅读</p>
+<ul>
+<li><a href="https://www.jianshu.com/p/bc62a66be82c" target="_blank" rel="noopener">排序–快速排序及其优化</a></li>
+</ul>
+</blockquote>
+<ul>
+<li><a href="https://segmentfault.com/a/1190000002651247" target="_blank" rel="noopener">面试官，您要的快排</a></li>
+</ul>
+<hr>
 
       
     </div>
@@ -464,6 +497,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/python/" rel="tag"># python</a>
+          
+        </div>
       
 
       
@@ -570,7 +609,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -675,7 +714,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#快速排序"><span class="nav-text">快速排序</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#快速排序"><span class="nav-text">快速排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#归并排序"><span class="nav-text">归并排序</span></a></li></ol></div>
             
 
           </div>
@@ -839,9 +878,9 @@
   
     <script type="text/javascript">
       var disqus_config = function () {
-        this.page.url = 'http://hamburger.ink/2018/08/19/快速排序/';
-        this.page.identifier = '2018/08/19/快速排序/';
-        this.page.title = '快速排序';
+        this.page.url = 'http://hamburger.ink/2018/08/19/排序/';
+        this.page.identifier = '2018/08/19/排序/';
+        this.page.title = '排序';
         };
       function loadComments () {
         var d = document, s = d.createElement('script');

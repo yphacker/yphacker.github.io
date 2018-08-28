@@ -4,6 +4,25 @@
 
     
   <url>
+    <loc>http://hamburger.ink/2018/08/28/%E8%BD%AC-%E5%86%99%E7%BB%99%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%9A%84%E5%8D%81%E6%9D%A1%E7%B2%BE%E8%BF%9B%E5%8E%9F%E5%88%99/</loc>
+    <lastmod>2018-08-28T15:30:14.000Z</lastmod>
+    <data>
+        <display>
+        <title>[转]写给工程师的十条精进原则</title>
+        <pubTime>2018-08-28T15:30:14.000Z</pubTime>
+        
+        <tag>标签1</tag>
+         
+        <tag>标签2</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://hamburger.ink/2018/08/26/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
     <lastmod>2018-08-26T08:54:36.000Z</lastmod>
     <data>
@@ -42,15 +61,20 @@
 
     
   <url>
-    <loc>http://hamburger.ink/2018/08/19/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/</loc>
-    <lastmod>2018-08-22T16:02:03.000Z</lastmod>
+    <loc>http://hamburger.ink/2018/08/19/%E6%8E%92%E5%BA%8F/</loc>
+    <lastmod>2018-08-26T08:38:45.000Z</lastmod>
     <data>
         <display>
-        <title>快速排序</title>
+        <title>排序</title>
         <pubTime>2018-08-19T06:54:52.000Z</pubTime>
         
+        <tag>python</tag>
+         
          
            
+             
+              <breadCrumb title="面试" url="http://hamburger.ink/categories/%E9%9D%A2%E8%AF%95/"/>
+          
         </display>
     </data>
     </url>
