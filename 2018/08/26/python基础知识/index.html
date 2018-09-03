@@ -449,7 +449,10 @@
       
 
       
-        <p>[^_^]:<br>    &gt;<br>    <img src="" alt=""></p>
+        <!--
+>
+![]()
+-->
 <a id="more"></a>
 <h3 id="python基础知识"><a href="#python基础知识" class="headerlink" title="python基础知识"></a>python基础知识</h3><h4 id="可变与不可变类型"><a href="#可变与不可变类型" class="headerlink" title="可变与不可变类型"></a>可变与不可变类型</h4><p>python中的对象分为：可变对象和不可变对象<br>可变对象：列表（list）、字典（dict ）<br>不可变对象：int、string、float、tuple<br>对不可变类型的变量重新赋值，实际上是重新创建一个不可变类型的对象，并将原来的变量重新指向新创建的对象（如果没有其他变量引用原有对象的话（即引用计数为0），原有对象就会被回收）。</p>
 <h5 id="可变与不可变类型作用"><a href="#可变与不可变类型作用" class="headerlink" title="可变与不可变类型作用"></a>可变与不可变类型作用</h5><p>python函数的参数传递：在python中规定函数的参数传递为引用传递，也就是说传递给函数的参数是这个变量所指向的内存地址。但是在C中，参数传递可以有值传递和引用传递，当需要修改外面参数的值的时候就才用引用传递（在参数前面加一个*，表示传递参数所指的内存地址），但不需要修改外部参数值的时候就采用值传递。</p>
@@ -461,6 +464,7 @@
 <h6 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h6><p>1、赋值：简单地拷贝对象的引用，两个对象的id相同。<br>2、浅拷贝：创建一个新的组合对象，这个新对象与原对象共享内存中的子对象。<br>3、深拷贝：创建一个新的组合对象，同时递归地拷贝所有子对象，新的组合对象与原对象没有任何关联。虽然实际上会共享不可变的子对象，但不影响它们的相互独立性。</p>
 <p>浅拷贝和深拷贝的不同仅仅是对组合对象来说，所谓的组合对象就是包含了其它对象的对象，如列表，类实例。而对于数字、字符串以及其它“原子”类型，没有拷贝一说，产生的都是原对象的引用。 </p>
 <h4 id="new-与-init-的区别"><a href="#new-与-init-的区别" class="headerlink" title="__new__()与__init__()的区别"></a>__new__()与__init__()的区别</h4><p>new方法是类创建实例的方法， 创建对象时调用，返回当前对象的一个实例<br>init()方法是类实例创建之后调用，用于对当前对象的一些初始化，没有返回值。<br>new()方法和init()方法所接收的参数是一样的。<br>需要注意的几点：<br>1、init()函数并不相当于C++或者C#中的构造函数，因为在执行init()函数的时候，实例已经构造出来了<br>2、子类可以不重写init()方法，实例化子类时可以自动调用超类中已定义的init()方法。但是如果重写了init()，实例化子类时将不会再 隐式的去调用超类中已定义的init()代码。<br>3、如果重写了init()，为了能使用或扩展超类中的行为，最好显式的调用超类的init()方法</p>
+<h4 id="python装饰器详解"><a href="#python装饰器详解" class="headerlink" title="python装饰器详解"></a>python装饰器详解</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#既不需要侵入，也不需要函数重复执行</span></span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">deco</span><span class="params">(func)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">wrapper</span><span class="params">()</span>:</span></span><br><span class="line">        startTime = time.time()</span><br><span class="line">        func()</span><br><span class="line">        endTime = time.time()</span><br><span class="line">        msecs = (endTime - startTime)*<span class="number">1000</span></span><br><span class="line">        print(<span class="string">"time is %d ms"</span> %msecs)</span><br><span class="line">    <span class="keyword">return</span> wrapper</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@deco</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"hello"</span>)</span><br><span class="line">    time.sleep(<span class="number">1</span>)</span><br><span class="line">    print(<span class="string">"world"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    f = func <span class="comment">#这里f被赋值为func，执行f()就是执行func()</span></span><br><span class="line">    f()</span><br></pre></td></tr></table></figure>
 <p>[^_^]:</p>
 <blockquote>
 <p>参考阅读</p>
@@ -468,6 +472,9 @@
 <li><a href="https://blog.csdn.net/xiongchengluo1129/article/details/79113591" target="_blank" rel="noopener">Python基础面试中常常问道的问题</a></li>
 </ul>
 </blockquote>
+<ul>
+<li><a href="https://blog.csdn.net/xiangxianghehe/article/details/77170585" target="_blank" rel="noopener">python装饰器详解</a></li>
+</ul>
 <hr>
 
       
@@ -598,7 +605,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">17</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -648,7 +655,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">9</span>
+                      
+                    
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -707,7 +716,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#python基础知识"><span class="nav-text">python基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#可变与不可变类型"><span class="nav-text">可变与不可变类型</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#可变与不可变类型作用"><span class="nav-text">可变与不可变类型作用</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#深拷贝和浅拷贝的实现方式以及区别"><span class="nav-text">深拷贝和浅拷贝的实现方式以及区别</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Python中直接赋值"><span class="nav-text">Python中直接赋值</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Python中浅拷贝"><span class="nav-text">Python中浅拷贝</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Python中深拷贝"><span class="nav-text">Python中深拷贝</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#总结"><span class="nav-text">总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#new-与-init-的区别"><span class="nav-text">__new__()与__init__()的区别</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#python基础知识"><span class="nav-text">python基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#可变与不可变类型"><span class="nav-text">可变与不可变类型</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#可变与不可变类型作用"><span class="nav-text">可变与不可变类型作用</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#深拷贝和浅拷贝的实现方式以及区别"><span class="nav-text">深拷贝和浅拷贝的实现方式以及区别</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Python中直接赋值"><span class="nav-text">Python中直接赋值</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Python中浅拷贝"><span class="nav-text">Python中浅拷贝</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Python中深拷贝"><span class="nav-text">Python中深拷贝</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#总结"><span class="nav-text">总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#new-与-init-的区别"><span class="nav-text">__new__()与__init__()的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#python装饰器详解"><span class="nav-text">python装饰器详解</span></a></li></ol></li></ol></div>
             
 
           </div>
